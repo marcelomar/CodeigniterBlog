@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /letscode.us
+RewriteCond $1 !^(index\\.php|javascript|css|images|robots\\.txt)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
